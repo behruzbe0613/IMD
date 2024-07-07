@@ -4,6 +4,7 @@
     --woocommerce: #7F54B3;
     --wc-main: #112349;
     --wc-green: #7ad03a;
+    --wc-light-green: #F2F2F2;
     --wc-red: #a00;
     --wc-orange: #ffba00;
     --wc-blue: #2ea2cc;
@@ -43,4 +44,15 @@
     width: 54px;
     height: 4px;
     background-color: var(--wc-dark-blue);
+}
+
+.btn{
+    color: var(--wc-main);
+    padding: 14px 38px 19px 38px;
+    font-size: 16px;
+    font-family: Open Sans;
+    font-weight: 600;
+    text-transform: none;
+    border-radius: 33px;
+    border: 2px solid var(--wc-main);
 }

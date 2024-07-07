@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-:root{
+:root {
     --woocommerce: #7F54B3;
     --main: #112349;
     --green: #7ad03a;
@@ -18,40 +16,48 @@
     --content-bg: #fff;
     --subtext: #767676;
     --section-header-text: #232323;
+    --text-blue: #254098;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
+body {
     background-color: var(--light-green);
     font-family: Open Sans;
 }
 
-.section-header .title{
+
+
+.section-header .title {
     color: var(--section-header-text);
-    font-size: 44px;
-    font-family: Montserrat,sans-serif;
-    font-weight: 500;
+    font-size: 43px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-align: center;
+
 }
 
-.section-header .subtitle{
+.section-header .subtitle {
     color: var(--subtext);
     font-size: 14px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-align: center;
 }
 
-.section-header .line{
+.section-header .line {
     width: 54px;
     height: 4px;
     background-color: var(--dark-blue);
 }
 
-.btn{
+.btn {
     color: var(--main);
     padding: 14px 38px 19px 38px;
     font-size: 16px;
@@ -61,3 +67,79 @@ body{
     border-radius: 33px;
     border: 2px solid var(--main);
 }
+
+/********** Success Stories START **********/
+.success_stories .section-header {
+    padding: 90px 0px 67px 0px;
+}
+
+.success_stories .result_stories {
+    margin: 0 auto;
+    padding: 85px 0px 45px 0px;
+    max-width: 1280px;
+    background: var(--content-bg);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.success_stories .result_stories div {
+    padding: 0 20px 30px 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.success_stories .result_stories div .result {
+    font-size: 40px;
+    color: var(--text-blue);
+    font-weight: 600;
+}
+
+.success_stories .result_stories div .theme_result {
+    font-size: 18px;
+    color: var(--subtext);
+    font-weight: 600;
+}
+
+.success_stories .img_slogan {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.success_stories .img_slogan img {
+    filter: opacity(80%);
+}
+
+.success_stories .img_slogan .slogan_boss {
+    min-height: 500px;
+    padding: 90px 115px 80px 115px;
+    height: 512.5px;
+}
+
+.success_stories .img_slogan .slogan_boss i {
+    font-size: 200px;
+    color: #E1E1E1;
+}
+
+.success_stories .img_slogan .slogan_boss h3 {
+    font-size: 28px;
+    color: #404040;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.success_stories .img_slogan .slogan_boss .director_name {
+    color: var(--text-blue);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.success_stories .img_slogan .slogan_boss .rank {
+    color: var(--text-blue);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/*********** Success Stories END ***********/

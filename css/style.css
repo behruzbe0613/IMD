@@ -2,22 +2,22 @@
 
 :root{
     --woocommerce: #7F54B3;
-    --wc-main: #112349;
-    --wc-green: #7ad03a;
-    --wc-light-green: #F2F2F2;
-    --wc-red: #a00;
-    --wc-orange: #ffba00;
-    --wc-blue: #2ea2cc;
-    --wc-dark-blue: #112349;
-    --wc-primary: #7F54B3;
-    --wc-primary-text: white;
-    --wc-secondary: #e9e6ed;
-    --wc-secondary-text: #515151;
-    --wc-highlight: #b3af54;
-    --wc-highligh-text: white;
-    --wc-content-bg: #fff;
-    --wc-subtext: #767676;
-    --wc-section-header-text: #232323;
+    --main: #112349;
+    --green: #7ad03a;
+    --light-green: #F2F2F2;
+    --red: #a00;
+    --orange: #ffba00;
+    --blue: #2ea2cc;
+    --dark-blue: #112349;
+    --primary: #7F54B3;
+    --primary-text: white;
+    --secondary: #e9e6ed;
+    --secondary-text: #515151;
+    --highlight: #b3af54;
+    --highligh-text: white;
+    --content-bg: #fff;
+    --subtext: #767676;
+    --section-header-text: #232323;
 }
 
 *{
@@ -27,32 +27,37 @@
     text-decoration: none;
 }
 
-.section-header h3{
-    color: var(--wc-section-header-text);
+body{
+    background-color: var(--light-green);
+    font-family: Open Sans;
+}
+
+.section-header .title{
+    color: var(--section-header-text);
     font-size: 44px;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
 
-.section-header p{
-    color: var(--wc-subtext);
+.section-header .subtitle{
+    color: var(--subtext);
     font-size: 14px;
-    font-family: Open Sans;
+    text-transform: uppercase;
 }
 
 .section-header .line{
     width: 54px;
     height: 4px;
-    background-color: var(--wc-dark-blue);
+    background-color: var(--dark-blue);
 }
 
 .btn{
-    color: var(--wc-main);
+    color: var(--main);
     padding: 14px 38px 19px 38px;
     font-size: 16px;
     font-family: Open Sans;
     font-weight: 600;
     text-transform: none;
     border-radius: 33px;
-    border: 2px solid var(--wc-main);
+    border: 2px solid var(--main);
 }

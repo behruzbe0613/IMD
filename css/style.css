@@ -28,19 +28,19 @@
 }
 
 body{
-    background-color: var(--wc-light-green);
+    background-color: var(--light-green);
     font-family: Open Sans;
 }
 
 .section-header .title{
-    color: var(--wc-section-header-text);
+    color: var(--section-header-text);
     font-size: 44px;
     font-family: Montserrat,sans-serif;
     font-weight: 500;
 }
 
 .section-header .subtitle{
-    color: var(--wc-subtext);
+    color: var(--subtext);
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -48,16 +48,16 @@ body{
 .section-header .line{
     width: 54px;
     height: 4px;
-    background-color: var(--wc-dark-blue);
+    background-color: var(--dark-blue);
 }
 
 .btn{
-    color: var(--wc-main);
+    color: var(--main);
     padding: 14px 38px 19px 38px;
     font-size: 16px;
     font-family: Open Sans;
     font-weight: 600;
     text-transform: none;
     border-radius: 33px;
-    border: 2px solid var(--wc-main);
+    border: 2px solid var(--main);
 }

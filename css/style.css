@@ -28,7 +28,12 @@
 
 body {
     background-color: var(--light-green);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 
@@ -68,6 +73,35 @@ body {
     border: 2px solid var(--main);
 }
 
+/* nav start */
+nav{
+    height: 82px;
+}
+
+nav .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-menu .nav-link{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Monserat',sans-serif;
+    color: var(--content-bg);
+}
+
+.nav-menu-btn{
+    display: none;
+}
+/* nav end */
 /********** Success Stories START **********/
 .success_stories .section-header {
     padding: 90px 0px 67px 0px;
@@ -177,4 +211,3 @@ body {
 
 /********* Media Query's  END*********/
 
-/*********** Success Stories END ***********/

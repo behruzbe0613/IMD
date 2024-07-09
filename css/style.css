@@ -33,6 +33,14 @@ body{
     font-family: Open Sans;
 }
 
+section{
+    padding-top: 90px;
+}
+
+.section-header{
+    margin-bottom: 70px;
+}
+
 .section-header .section-title{
     color: var(--black);
     font-size: 44px;
@@ -74,13 +82,6 @@ body{
 
 
 /******************** service section style start ********************/
-.service-section{
-    padding-top: 60px;
-}
-
-.service-section .section-header{
-    margin-bottom: 70px;
-}
 
 .service-section .service-body{
     display: grid;

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-:root{
+:root {
     --woocommerce: #7F54B3;
     --green: #7ad03a;
     --light-green: #F2F2F2;
@@ -17,10 +16,11 @@
     --content-bg: #fff;
     --subtext: #767676;
     --black: #232323;
+    --text-blue: #254098;
     --main-text: #254099;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,9 +28,14 @@
     list-style: none;
 }
 
-body{
+body {
     background-color: var(--content-bg);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1290px;
+    margin: 0 auto;
 }
 
 section{
@@ -41,23 +46,27 @@ section{
     margin-bottom: 70px;
 }
 
-.section-header .section-title{
+.section-header .section-title {
     color: var(--black);
-    font-size: 44px;
-    font-family: Montserrat,sans-serif;
-    font-weight: 500;
+    font-size: 43px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
+    text-align: center;
+
 }
 
 .section-header .section-subtitle{
     color: var(--subtext);
     font-size: 14px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
     text-align: center;
 }
 
-.section-header .line{
+.section-header .line {
     width: 54px;
     height: 4px;
     background-color: var(--dark-blue);
@@ -65,10 +74,10 @@ section{
 }
 
 .btn-box{
-    padding-bottom: 30px;
+    padding: 0 20px 30px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     color: var(--main-text);
     padding: 14px 38px 19px 38px;
@@ -80,6 +89,145 @@ section{
     border: 2px solid var(--main-text);
 }
 
+/* nav start */
+nav{
+    height: 82px;
+}
+
+nav .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-menu .nav-link{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Monserat',sans-serif;
+    color: var(--content-bg);
+}
+
+.nav-menu-btn{
+    display: none;
+}
+/* nav end */
+/********** Success Stories START **********/
+.success_stories .section-header {
+    padding: 90px 0px 67px 0px;
+}
+
+
+
+.result-stories .content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin: 0 auto;
+    padding: 85px 0px 45px 0px;
+    max-width: 1280px;
+    background: #fff;
+}
+
+.result-stories .box {
+    padding: 0 20px 30px;
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+}
+
+.result-stories .box .num {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-blue);
+    font-family: sans-serif;
+}
+
+.result-stories .box .text {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #8c8c8c;
+    font-weight: 600;
+}
+
+.success_stories .img_slogan {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.success_stories .img_slogan img {
+    filter: opacity(80%);
+}
+
+.success_stories .img_slogan .slogan_boss {
+    min-height: 500px;
+    padding: 90px 115px 80px 115px;
+    height: 512.5px;
+}
+
+.success_stories .img_slogan .slogan_boss i {
+    font-size: 200px;
+    color: #E1E1E1;
+}
+
+.success_stories .img_slogan .slogan_boss h3 {
+    font-size: 28px;
+    color: #404040;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.success_stories .img_slogan .slogan_boss .director_name {
+    color: var(--text-blue);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.success_stories .img_slogan .slogan_boss .rank {
+    color: var(--text-blue);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+
+/******** Media Query's  START********/
+@media (max-width:764px) {
+    .result-stories .content {
+        grid-template-columns: auto;
+        padding-bottom: 50px;
+    }
+
+    .slogan_img {
+        display: none;
+    }
+
+    .success_stories .img_slogan .slogan_boss {
+        min-height: 500px;
+        padding: 90px 30px 80px 72px;
+        height: auto;
+    }
+
+    .success_stories .img_slogan .slogan_boss i {
+        font-size: 100px;
+    }
+
+    .success_stories .img_slogan .slogan_boss h3 {
+        font-size: 30px;
+    }
+}
+
+/********* Media Query's  END*********/
+
+
 
 /******************** service section style start ********************/
 
@@ -87,12 +235,12 @@ section{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
-    background-color: var(--light-green);
-    padding: 20px 0;
+    padding: 20px 30px;
 }
 
 .service-body .service-card{
     background-color: var(--content-bg);
+    box-shadow: 0 0 74px rgba(10, 10, 10, 0.07);
 }
 
 .service-body .service-card img{
@@ -117,6 +265,12 @@ section{
 
 
 /******************** service section media ********************/
+@media (max-width: 842px) {
+    .service-section .service-body{
+        grid-template-columns: auto auto;
+    }
+}
+
 @media (max-width:765px) {
     .service-section .service-body{
         grid-template-columns: auto;
@@ -128,7 +282,7 @@ section{
 
 /******************** about-us section style start ********************/
 .about-us-section{
-    padding-top: 60px;
+    position: relative;
 }
 
 .about-us-section .boss-img {
@@ -143,7 +297,7 @@ section{
 }
 
 .about-us-section .about-us-section-title p{
-    color: var(--subtext);
+    color: #A5B3DF;
     font-size: 15px;
     margin: 20px 0;
     text-transform: uppercase;
@@ -151,7 +305,7 @@ section{
 }
 
 .about-us-section .about-us-section-title h3{
-    color: var(--subtext);
+    color: var(--primary-text);
     font-size: 44px;
     font-family: Montserrat, sans-serif;
     text-align: center;
@@ -161,11 +315,13 @@ section{
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
+    margin: 30px 15px 80px;
 }
 
 .about-us-content .content-text{
-    color: var(--subtext);
+    color: #A5B3DF;
     font-size: 19px;
+    line-height: 30px;
 }
 
 .about-us-section .company-info-wrapper{
@@ -174,12 +330,20 @@ section{
 }
 
 .company-info-wrapper iframe{
-    width: 100%;
-    height: 100%;
+    width: 100.1%;
+    height: 100.1%;
+}
+
+.company-info-wrapper .company-info-box{
+    background-color: var(--content-bg);
 }
 
 .company-info-wrapper .company-info-box .company-info{
     padding: 80px 40px 60px 50px;
+}
+
+.company-info .info-texts-box{
+    padding: 0 20px 30px;
 }
 
 .company-info .company-title{
@@ -193,12 +357,14 @@ section{
     font-size: 43px;
     font-weight: 600;
     color: var(--main-text);
+    font-family: "Montserrat";
 }
 
 .company-info .company-info-text{
     color: var(--subtext);
     font-size: 17px;
-    margin: 30px 0;
+    margin: 20px 0;
+    line-height: 30px;
 }
 
 .company-info-wrapper .works-info-box{
@@ -242,6 +408,10 @@ section{
     color: var(--secondary);
 }
 
+.works-info-box .btn-box{
+    padding-left: 0;
+}
+
 .works-info-box .btn{
     color: var(--main-text);
     background-color: var(--content-bg);
@@ -249,13 +419,34 @@ section{
     font-weight: 700;
 }
 
-.company-info-wrapper .works-img-box{
-    width: 100%;
-    max-height: 632px;
-}
-
 .company-info-wrapper .works-img-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.about-us-section .background-box{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(#313B70,#313B70);
+    z-index: -1;
+}
+
+/******************** about-us section media ********************/
+@media (max-width: 1150px) {
+    .works-info-box .works-info{
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 765px) {
+    .about-us-section .company-info-wrapper{
+        grid-template-columns: 100%;
+    }
+    .about-us-section .about-us-content{
+        grid-template-columns: auto;
+    }
 }

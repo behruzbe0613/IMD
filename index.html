@@ -11,36 +11,71 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- connect owl carouse css -->
+    <!-- Connect OWL Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <!-- custom css -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- nav start -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="./images/logo.png" alt="logo">
-            </a>
-            <div class="nav-menu">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#" class="nav-link">Our Services</a>
-                <a href="#" class="nav-link">About Us</a>
-                <a href="#" class="nav-link">Our Projects</a>
-                <a href="#" class="nav-link">Our Team</a>
-                <a href="#" class="nav-link">Contact</a>
-                <div class="nav-slide-bar"></div>
+    <!---------- Header START ---------->
+    <header>
+        <!---------- Nav START ---------->
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Our Services</a>
+                    <a href="#" class="nav-link">About Us</a>
+                    <a href="#" class="nav-link">Our Projects</a>
+                    <a href="#" class="nav-link">Our Team</a>
+                    <a href="#" class="nav-link">Contact</a>
+                    <div class="nav-slide-bar"></div>
+                </div>
+                <button class="nav-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <button class="nav-menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        </nav>
+        <!---------- Nav END ---------->
+
+        <!---------- Header Slider START ---------->
+        <div class="header-slider">
+            <div class="owl-carousel owl-theme">
+                <div class="item item1">
+                    <div class="container">
+                        <div class="header-content">
+                            <h2>Financity</h2>
+                            <p>
+                                We help you managing asset, provide financial advise. Leave money issue with us and
+                                focus on your core business.
+                            </p>
+                            <a href="#" class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item2">
+                    <div class="container">
+                        <div class="header-content">
+                            <h2>growing business</h2>
+                            <p>
+                                We help you managing asset, provide financial advise. Leave money issue with us and
+                                focus on your core business.
+                            </p>
+                            <a href="#" class="btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-    <!-- nav end -->
+        <!---------- Header Slider END ---------->
+    </header>
+    <!---------- Header END ---------->
 
 
     <!--------- Success Stories START--------->
@@ -81,12 +116,25 @@
     </section>
     <!---------- Success Stories END---------->
 
-    <!-- connect owl carouse js/jquery -->
+    <!---------- connect owl carouse js/jquery ---------->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
 
-    <!-- connect custom js -->
+    <!---------- connect custom js ---------->
     <script src="./js/index.js"></script>
+
+    <script>
+        $('.header-slider .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            items: 1,
+            animateOut: 'fadeOut',
+            touchDrag: false,
+            mouseDrag: false
+        })
+    </script>
 </body>
 
 </html>

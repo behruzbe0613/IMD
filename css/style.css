@@ -575,8 +575,17 @@ nav .container{
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+.ourworks-body .ourworks-card{
+    /* max-height: 360px; */
+    overflow: hidden;
+}
+
 .ourworks-body .ourworks-card img{
     width: 100%;
+}
+
+.ourworks-body .ourworks-card img:hover{
+    transform: scale(1.1);
 }
 
 .ourworks-card .ourworks-card-body{
@@ -727,3 +736,117 @@ nav .container{
 }
 
 /********* Media Query's  END*********/
+
+
+/******************** contact section style start ********************/
+.contact{
+    padding-bottom: 60px;
+}
+
+.contact .contact-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.contact-wrapper .section-header{
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+
+.contact-wrapper .section-header .section-title{
+    text-align: left;
+}
+
+.contact-wrapper .section-header .line{
+    margin: 20px 0;
+}
+
+.contact-wrapper .section-header .section-subtitle{
+    text-align: left;
+    font-size: 15px;
+}
+
+.contact-wrapper .section-header .section-subtitle:last-child{
+    padding-bottom: 8px;
+}
+
+.contact-wrapper #form{
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.contact-wrapper #form input,textarea{
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.contact-wrapper #form textarea{
+    grid-column: 1/3;
+}
+
+.contact-wrapper #form .submit-btn-box{
+    grid-column: 1/3;
+}
+
+.contact-wrapper #form .btn{
+    text-align: center;
+    background-color: var(--main-text);
+    color: var(--highligh-text);
+    cursor: pointer;
+}
+
+/******************** contact section media start ********************/
+@media (max-width: 1150px) {
+    .contact .contact-wrapper{
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .contact-wrapper .section-header{
+        padding: 0 15px;
+    }
+    .contact-wrapper .section-header .section-title{
+        font-size: 35px;
+    }
+    .contact-wrapper .section-header .line{
+        margin: 10px 0;
+    }
+    .contact-wrapper .section-header .section-subtitle{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 954px) {
+    .contact .contact-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-wrapper #form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 530px){
+    .contact-wrapper .section-header .section-title{
+        font-size: 30px;
+    }
+    .contact-wrapper .section-header .section-subtitle{
+        font-size: 12px;
+    }
+    .contact-wrapper #form{
+        grid-template-columns: auto;
+    }
+    .contact-wrapper #form textarea{
+        grid-column: 1/2;
+    }
+    .contact-wrapper #form .submit-btn-box{
+        grid-column: 1/2;
+    }
+}

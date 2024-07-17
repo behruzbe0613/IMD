@@ -1,7 +1,7 @@
 const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 const activeLink = document.querySelector(".nav-menu .nav-link.active");
 const navSlideBar = document.querySelector(".nav-slide-bar");
-
+const nav = document.querySelector("header nav");
 
 navSlideBar.style.left = activeLink.offsetLeft+18+"px";
 navSlideBar.style.width = activeLink.offsetWidth-36+"px";
@@ -41,4 +41,13 @@ window.onscroll = () => {
         }
         test = true;
     }
+
+    if(document.documentElement.scrollTop > 100){
+        nav.classList.add("scrolled");
+    }
+    else{
+        nav.classList.remove("scrolled");
+    }
+
+    console.log(document.documentElement.scrollTop);
 }

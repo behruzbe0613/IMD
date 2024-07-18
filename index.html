@@ -29,6 +29,7 @@
                     <img src="./images/logo.png" alt="logo">
                 </a>
                 <div class="nav-menu">
+                    <i class="fa-solid fa-x" id="close-nav"></i>
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#service" class="nav-link">Our Services</a>
                     <a href="#about" class="nav-link">About Us</a>
@@ -37,9 +38,7 @@
                     <a href="#contact" class="nav-link">Contact</a>
                     <div class="nav-slide-bar"></div>
                 </div>
-                <a href="#" class="nav-menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
+                    <i class="fa-solid fa-bars" id="nav-menu-btn"></i>
             </div>
         </nav>
         <!---------- Nav END ---------->
@@ -431,7 +430,7 @@
                 <p class="section-subtitle">Read All News</p>
                 <div class="line"></div>
             </div>
-            <div class="workers">
+            <div class="workers-slider">
                 <div class="owl-carousel owl-theme line-indecators dark">
                     <div class="item">
                         <div class="card">
@@ -816,7 +815,7 @@
                 }
             }
         });
-        $('.news-slider .owl-carousel').owlCarousel({
+        $('.workers-slider .owl-carousel').owlCarousel({
             loop: false,
             margin: 40,
             nav: false,

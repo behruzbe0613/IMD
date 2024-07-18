@@ -2,7 +2,11 @@ const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 const activeLink = document.querySelector(".nav-menu .nav-link.active");
 const navSlideBar = document.querySelector(".nav-slide-bar");
 const nav = document.querySelector("header nav");
-const section_result = document.querySelector(".section-header")
+const section_result = document.querySelector(".section-header");
+const navMenuBtn = document.querySelector('#nav-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+const closeNav = document.querySelector('#close-nav');
+const sections = document.querySelectorAll('section');
 
 
 navSlideBar.style.left = activeLink.offsetLeft + 18 + "px";
@@ -62,3 +66,28 @@ window.addEventListener('scroll', function () {
     }
 
 });
+
+navMenuBtn.addEventListener('click', () => {
+   navMenu.classList.add('nav-active'); 
+})
+
+closeNav.addEventListener('click', () => {
+    navMenu.classList.remove('nav-active'); 
+ })
+
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height){
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('.nav-menu a [href*=' + id + ']').classList.add('active')
+            })
+        }
+    })
+}

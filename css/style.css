@@ -33,6 +33,7 @@
 body {
     background-color: var(--content-bg);
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -1039,10 +1040,6 @@ nav .container {
 
 /********* SPONSOR CAROUSEL  START*********/
 
-.sponsors {
-    padding: 70px 50px 30px 150px;
-}
-
 .sponsors .icon-wrapper {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -1052,7 +1049,7 @@ nav .container {
 .sponsors .icon-wrapper .icon-box img {
     width: 130px;
     height: 50px;
-
+    margin: 0 auto;
 }
 
 /**********SPONSOR CAROUSEL END**********/
@@ -1215,18 +1212,18 @@ textarea {
 
 /********* Media Query's  END*********/
 
-/********** Latest News START **********/
-.news-slider .card{
+/********** Our Workers START **********/
+.workers-slider .card{
     box-shadow: rgba(10, 10, 10, 0.07) 0px 0px 30px;
 }
 
-.news-slider .card-img{
+.workers-slider .card-img{
     height: 263px;
     overflow: hidden;
     position: relative;
 }
 
-.news-slider .card-img::after{
+.workers-slider .card-img::after{
     content: '';
     width: 100%;
     height: 100%;
@@ -1239,43 +1236,43 @@ textarea {
     transition: all 0.3s ease-in-out;
 }
 
-.news-slider .card-img:hover::after{
+.workers-slider .card-img:hover::after{
     opacity: 1;
 }
 
-.news-slider .card-img img{
+.workers-slider .card-img img{
     width: 100%;
     height: 100%;
 }
 
-.news-slider .card-img:hover img{
+.workers-slider .card-img:hover img{
     transform: scale(1.1);
 }
 
-.news-slider .card-body{
+.workers-slider .card-body{
     padding: 40px 35px 24px;
 }
 
-.news-slider .card-body .subtitle{
+.workers-slider .card-body .subtitle{
     font-size: 12px;
     text-transform: uppercase;
     color: #959595;
     margin-bottom: 7px;
 }
 
-.news-slider .card-body .title{
+.workers-slider .card-body .title{
     font-size: 18px;
     color: #282828;
     margin-bottom: 14px;
 }
 
-.news-slider .card .icons{
+.workers-slider .card .icons{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.news-slider .card .icons a{
+.workers-slider .card .icons a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1287,14 +1284,14 @@ textarea {
     justify-content: center;
 }
 
-.news-slider .owl-stage{
+.workers-slider .owl-stage{
     padding: 50px 0;
 }
 
-.news-slider .line-indecators .owl-dots{
+.workers-slider .line-indecators .owl-dots{
     bottom: 85px;
 }
-/********** Latest News AND **********/
+/********** Our Workers AND **********/
 
 /********** Testimonial START **********/
 .testimonial{

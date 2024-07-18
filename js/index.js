@@ -54,12 +54,11 @@ window.addEventListener('scroll', function () {
     if (scrol > 5014) {
         scrolling()
     }
-    if(document.documentElement.scrollTop > 100){
+    if (document.documentElement.scrollTop > 100) {
         nav.classList.add("scrolled");
     }
-    else{
+    else {
         nav.classList.remove("scrolled");
     }
 
-    console.log(document.documentElement.scrollTop);
 });

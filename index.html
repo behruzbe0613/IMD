@@ -21,7 +21,7 @@
 
 <body>
     <!---------- Header START ---------->
-    <header>
+    <header id="home">
         <!---------- Nav START ---------->
         <nav>
             <div class="container">
@@ -29,12 +29,12 @@
                     <img src="./images/logo.png" alt="logo">
                 </a>
                 <div class="nav-menu">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link">Our Services</a>
-                    <a href="#" class="nav-link">About Us</a>
-                    <a href="#" class="nav-link">Our Projects</a>
-                    <a href="#" class="nav-link">Our Team</a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#service" class="nav-link">Our Services</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#works" class="nav-link">Our Projects</a>
+                    <a href="#workers" class="nav-link">Our Team</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                     <div class="nav-slide-bar"></div>
                 </div>
                 <a href="#" class="nav-menu-btn">
@@ -125,7 +125,7 @@
 
 
     <!--------- Service Section START--------->
-    <section class="service-section">
+    <section class="service-section" id="service">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Services We Provide</h3>
@@ -199,7 +199,7 @@
     <!--------- Service Section END--------->
 
     <!--------- About-Us Section START--------->
-    <section class="about-us-section">
+    <section class="about-us-section" id="about">
         <div class="container">
             <div class="boss-img">
                 <img src="images/hp2-about.jpg" alt="">
@@ -286,7 +286,7 @@
     <!--------- About-Us Section END--------->
 
     <!--------- Our Works Section START--------->
-    <section class="ourworks-section">
+    <section class="ourworks-section" id="works">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Our Works</h3>
@@ -423,15 +423,15 @@
     </section>
     <!---------- Success Stories END---------->
 
-    <!---------- Latest News START ---------->
-    <section class="news">
+    <!---------- Our Workers START ---------->
+    <section class="workers" id="workers">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Latest News</h3>
                 <p class="section-subtitle">Read All News</p>
                 <div class="line"></div>
             </div>
-            <div class="news-slider">
+            <div class="workers">
                 <div class="owl-carousel owl-theme line-indecators dark">
                     <div class="item">
                         <div class="card">
@@ -547,7 +547,7 @@
             </div>
         </div>
     </section>
-    <!---------- Latest News END ---------->
+    <!---------- Our Workers END ---------->
 
     <!---------- Testimonial START ---------->
     <section class="testimonial">
@@ -596,7 +596,7 @@
     <!---------- Testimonial END ---------->
 
     <!--------- Contact Stories START--------->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="section-header">
@@ -625,32 +625,62 @@
     <!--------- Contact Stories END--------->
 
     <!---------- Footer START ---------->
-    <div class="sponsors">
+    <section class="sponsors">
         <div class="container">
-            <div class="icon-wrapper">
-                <div class="icon-box">
-                    <img src="./images/banner-1.png" alt="">
+            <div class="owl-carousel icon-wrapper owl-theme line-indecators">
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-1.png" alt="">
+                    </div>
                 </div>
-                <div class="icon-box">
-                    <img src="./images/banner-2.png" alt="">
-
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-2.png" alt="">
+                    </div>
                 </div>
-                <div class="icon-box">
-                    <img src="./images/banner-3.png" alt="">
-
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-3.png" alt="">
+                    </div>
                 </div>
-                <div class="icon-box">
-                    <img src="./images/banner-4.png" alt="">
-
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-4.png" alt="">
+                    </div>
                 </div>
-                <div class="icon-box">
-                    <img src="./images/banner-5.png" alt="">
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-5.png" alt="">
+                    </div>
                 </div>
-
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-1.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-2.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-3.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-4.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon-box">
+                        <img src="./images/banner-5.png" alt="">
+                    </div>
+                </div>
             </div>
-
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -683,7 +713,7 @@
                     <div>
                         <a href="#" class="info-link">Possession of my entire soul</a><br>
                         <span>JUNE 6, 2016</span>
-                    </div>  
+                    </div>
                     <div>
                         <a href="#" class="info-link">I am so happy, my dear friend</a><br>
                         <span>JUNE 6, 2016</span>
@@ -813,6 +843,30 @@
             dotsEach: true,
             autoplay: true,
             autoplayTimeout: 4000
+        });
+
+        $('.owl-carousel.icon-wrapper').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: false,
+            items: 1,
+            responsive: {
+                480:{
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                }
+            },
+            autoplay: true,
+            autoplayTimeout: 3000
         });
     </script>
 </body>

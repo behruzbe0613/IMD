@@ -76,6 +76,24 @@ closeNav.addEventListener('click', () => {
  })
 
 
+// let currentSection = 'home';
+// window.addEventListener('scroll', () => {
+//     sections.forEach(sectionEl => {
+//         if(window.screenY >= (sectionEl.offsetTop-sectionEl.clientHeight / 3)){
+//             currentSection = sectionEl.id;
+//         }
+//     })
+
+//     navLinks.forEach(navLinkEl => {
+//         if(navLinkEl.href.includes(currentSection)){
+//             document.querySelector('.active').classList.remove('active');
+//             navLinkEl.classList.add('active');
+//         }
+//     })
+// })
+
+
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;

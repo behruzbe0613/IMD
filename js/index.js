@@ -72,13 +72,6 @@ window.addEventListener('scroll', function () {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-
-        console.log("------");
-        console.log(sec);
-        console.log(top);
-        console.log(offset);
-        console.log(height);
-
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');

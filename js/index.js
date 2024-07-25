@@ -7,6 +7,7 @@ const navMenuBtn = document.querySelector('#nav-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const closeNav = document.querySelector('#close-nav');
 const sections = document.querySelectorAll('section');
+const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
 
 navSlideBar.style.left = activeLink.offsetLeft + 18 + "px";
@@ -23,6 +24,8 @@ navLinks.forEach(link => {
     link.addEventListener("click", () => {
         document.querySelector(".nav-menu .nav-link.active").classList.remove("active");
         link.classList.add("active");
+        navMenu.classList.remove('nav-active'); 
+        navMenuWrapper.classList.remove('wrapper-active'); 
     });
 });
 
@@ -69,11 +72,19 @@ window.addEventListener('scroll', function () {
 
 navMenuBtn.addEventListener('click', () => {
    navMenu.classList.add('nav-active'); 
+   navMenuWrapper.classList.add('wrapper-active'); 
 })
 
 closeNav.addEventListener('click', () => {
     navMenu.classList.remove('nav-active'); 
+    navMenuWrapper.classList.remove('wrapper-active'); 
  })
+
+ navMenuWrapper.addEventListener('click', () => {
+    navMenu.classList.remove('nav-active'); 
+    navMenuWrapper.classList.remove('wrapper-active'); 
+ })
+
 
 
 // let currentSection = 'home';
@@ -94,18 +105,18 @@ closeNav.addEventListener('click', () => {
 
 
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+// window.onscroll = () => {
+//     sections.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop - 150;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('.nav-menu a [href*=' + id + ']').classList.add('active')
-            })
-        }
-    })
-}
+//         if(top >= offset && top < offset + height){
+//             navLinks.forEach(links => {
+//                 links.classList.remove('active');
+//                 document.querySelector('.nav-menu a [href*=' + id + ']').classList.add('active')
+//             })
+//         }
+//     })
+// }

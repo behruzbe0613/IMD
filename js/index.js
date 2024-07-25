@@ -6,7 +6,7 @@ const section_result = document.querySelector(".section-header");
 const navMenuBtn = document.querySelector('#nav-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const closeNav = document.querySelector('#close-nav');
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section[id]');
 
 
 navSlideBar.style.left = activeLink.offsetLeft + 18 + "px";
@@ -20,10 +20,10 @@ navLinks.forEach(link => {
         navSlideBar.style.left = document.querySelector(".nav-menu .nav-link.active").offsetLeft + 18 + "px";
         navSlideBar.style.width = document.querySelector(".nav-menu .nav-link.active").offsetWidth - 36 + "px";
     });
-    link.addEventListener("click", () => {
-        document.querySelector(".nav-menu .nav-link.active").classList.remove("active");
-        link.classList.add("active");
-    });
+    // link.addEventListener("click", () => {
+    //     document.querySelector(".nav-menu .nav-link.active").classList.remove("active");
+    //     link.classList.add("active");
+    // });
 });
 
 
@@ -68,31 +68,12 @@ window.addEventListener('scroll', function () {
 });
 
 navMenuBtn.addEventListener('click', () => {
-   navMenu.classList.add('nav-active'); 
+    navMenu.classList.add('nav-active');
 })
 
 closeNav.addEventListener('click', () => {
-    navMenu.classList.remove('nav-active'); 
- })
-
-
-// let currentSection = 'home';
-// window.addEventListener('scroll', () => {
-//     sections.forEach(sectionEl => {
-//         if(window.screenY >= (sectionEl.offsetTop-sectionEl.clientHeight / 3)){
-//             currentSection = sectionEl.id;
-//         }
-//     })
-
-//     navLinks.forEach(navLinkEl => {
-//         if(navLinkEl.href.includes(currentSection)){
-//             document.querySelector('.active').classList.remove('active');
-//             navLinkEl.classList.add('active');
-//         }
-//     })
-// })
-
-
+    navMenu.classList.remove('nav-active');
+})
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -101,10 +82,13 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('.nav-menu a [href*=' + id + ']').classList.add('active')
+                let link = document.querySelector('.nav-menu a[href*=' + id + ']');
+                link.classList.add('active');
+                navSlideBar.style.left = link.offsetLeft + 18 + "px";
+                navSlideBar.style.width = link.offsetWidth - 36 + "px";
             })
         }
     })

@@ -6,7 +6,8 @@ const section_result = document.querySelector(".section-header");
 const navMenuBtn = document.querySelector('#nav-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 const closeNav = document.querySelector('#close-nav');
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('.section');
+const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
 
 navSlideBar.style.left = activeLink.offsetLeft + 18 + "px";
@@ -20,10 +21,10 @@ navLinks.forEach(link => {
         navSlideBar.style.left = document.querySelector(".nav-menu .nav-link.active").offsetLeft + 18 + "px";
         navSlideBar.style.width = document.querySelector(".nav-menu .nav-link.active").offsetWidth - 36 + "px";
     });
-    // link.addEventListener("click", () => {
-    //     document.querySelector(".nav-menu .nav-link.active").classList.remove("active");
-    //     link.classList.add("active");
-    // });
+    link.addEventListener("click", () => {
+        navMenu.classList.remove('nav-active'); 
+        navMenuWrapper.classList.remove('wrapper-active'); 
+    });
 });
 
 
@@ -65,22 +66,18 @@ window.addEventListener('scroll', function () {
         nav.classList.remove("scrolled");
     }
 
-});
-
-navMenuBtn.addEventListener('click', () => {
-    navMenu.classList.add('nav-active');
-})
-
-closeNav.addEventListener('click', () => {
-    navMenu.classList.remove('nav-active');
-})
-
-window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop-150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
+
+
+        console.log("------");
+        console.log(sec);
+        console.log(top);
+        console.log(offset);
+        console.log(height);
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
@@ -92,4 +89,20 @@ window.onscroll = () => {
             })
         }
     })
-}
+
+});
+
+navMenuBtn.addEventListener('click', () => {
+    navMenu.classList.add('nav-active');
+    navMenuWrapper.classList.add('wrapper-active');
+})
+
+closeNav.addEventListener('click', () => {
+    navMenu.classList.remove('nav-active'); 
+    navMenuWrapper.classList.remove('wrapper-active');
+ })
+
+ navMenuWrapper.addEventListener('click', () => {
+    navMenu.classList.remove('nav-active'); 
+    navMenuWrapper.classList.remove('wrapper-active'); 
+ })

@@ -231,7 +231,7 @@ header {
 
 .header-slider .item h2 {
     font-weight: 700;
-    font-size: clamp(49px, 8.46vw, 130px);
+    font-size: clamp(37px, 6.1vw, 90px);
     color: var(--content-bg);
     margin-bottom: 25px;
 }
@@ -380,7 +380,7 @@ header {
         margin-bottom: 10px;
     }
     .header-slider .item p {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 10px;
     }
 }
@@ -597,7 +597,7 @@ nav .container {
     }
 }
 
-@media (max-width:765px) {
+@media (max-width:770px) {
     .service-section .service-body {
         grid-template-columns: auto;
     }
@@ -830,7 +830,7 @@ nav .container {
     }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 770px) {
     .about-us-section .boss-img {
         width: 400px;
     }
